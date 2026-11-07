@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+instances/
+data/*.db-*
+.pytest_cache/
+data/*.db
+static/assets/profile.jpg
+static/assets/profile.png
+static/assets/profile.webp

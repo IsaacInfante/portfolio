@@ -1,0 +1,59 @@
+# Local tools and delivery review artifacts
+.tools/
+.delivery/
+.vscode/
+
+# Environments and local instance configuration
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+instances/
+
+# Runtime state, caches and logs
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.sqlite-*
+*.sqlite3-*
+*.log
+*.tmp
+*.temp
+*.bak
+*.zip
+*.7z
+*.tar
+*.gz
+Thumbs.db
+.DS_Store
+
+# Authentication material and private keys
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+*.jks
+id_rsa*
+id_ed25519*
+credentials.json
+client_secret*.json
+service-account*.json
+service_account*.json
+token.json
+tokens.json
+
+# Personal photos are added separately, only with explicit consent
+profile.jpg
+profile.png
+profile.webp

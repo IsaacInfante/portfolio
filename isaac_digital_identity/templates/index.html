@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#090B10" />
+  <meta name="description" content="Portfolio profesional de {{ profile.name }}. Software, ingeniería y proyectos." />
+  <title>Portfolio | {{ profile.name }}</title>
+  <link rel="icon" href="/static/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/styles.css" />
+  <script defer src="/static/app.js"></script>
+</head>
+<body data-profile-id="{{ profile_id }}">
+  <div class="noise" aria-hidden="true"></div>
+  <div class="progress" id="scrollProgress"></div>
+  <header class="topbar">
+    <a class="wordmark" href="/" aria-label="Volver al inicio"><span class="mark">I<span class="mark-dot">·</span>I</span><span class="wordmark-text">PORTFOLIO<span class="wordmark-sup">©26</span></span></a>
+    <nav class="navlinks" aria-label="Navegación principal">
+      <a href="#about">Perfil</a><a href="#projects">Proyectos</a><a href="#experience">Experiencia</a><a href="#stack">Stack</a>
+    </nav>
+    <div class="nav-end"><span class="availability"><span class="live-dot"></span>OPEN TO CONNECT</span><button class="btn btn-small btn-green" data-jump="agent">Mi agente <span aria-hidden="true">↗</span></button></div>
+    <button class="mobile-toggle" id="mobileMenu" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
+  </header>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Menú móvil"><a href="#about">Perfil</a><a href="#projects">Proyectos</a><a href="#experience">Experiencia</a><a href="#stack">Stack</a><a href="#agent">Mi agente</a></nav>
+
+  <main>
+    <section class="hero wrap" id="top">
+      <div class="hero-meta"><span><span class="tiny-cross">✳</span> PORTAFOLIO / 2026</span><span>{{ profile.location|default("PORTFOLIO") }}</span><span class="hero-index">01 / 06</span></div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="line"></span><span>HELLO, I'M <span id="heroFirstName">{{ profile.id }}</span></span></div>
+          <h1 class="hero-headline">Portfolio<span class="period">.</span></h1><p class="hero-name" id="heroName">{{ profile.name }}</p>
+          <p class="hero-description" id="heroDescription">Conecto software, hardware e infraestructura para convertir problemas reales en soluciones útiles.</p>
+          <div class="hero-cta"><button class="btn btn-green btn-large" data-jump="projects">Explorar proyectos <span aria-hidden="true">↗</span></button><button class="btn btn-outline btn-large" id="openQrHero">Compartir portfolio <span aria-hidden="true">↗</span></button></div>
+          <div class="hero-bottom"><span class="square-plus">+</span><span id="heroRole">{{ profile.role }}</span><span class="hero-coords">{{ profile.location|default("") }}</span></div>
+        </div>
+        <div class="identity-stage" aria-label="Tarjeta de identidad profesional digital">
+          <div class="stage-grid"></div><div class="stage-radial"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="stage-stamp">PERSONAL ID<span> / 001</span></div>
+          <span class="stage-cross cross-a">+</span><span class="stage-cross cross-b">+</span><span class="stage-cross cross-c">+</span>
+          <div class="portrait-ring"><div class="portrait-inner"><span id="avatarInitials">{{ profile.initials|default("ID") }}</span><img id="profilePhoto" src="" alt="Fotografía profesional" hidden /></div></div>
+          <div class="floating-tag floating-a"><span class="mini-wave">∿∿∿</span> SOFTWARE + HARDWARE</div>
+          <div class="floating-tag floating-b"><span class="tag-bullet"></span> PERFIL PROFESIONAL</div>
+          <div class="identity-plate"><span class="plate-id">PORTFOLIO / <span id="profileIdLabel">{{ profile.id }}</span></span><strong id="plateName">{{ profile.name }}</strong><div class="plate-bottom"><span id="plateCareer">{{ profile.role }}</span><span>MX · 2026</span></div></div>
+          <span class="edge-index">Nº 0001 — EST 2023</span>
+        </div>
+      </div>
+      <div class="hero-foot"><div><span>FOCUS AREAS</span><strong>SOFTWARE <span>/</span> SECURITY <span>/</span> EMBEDDED</strong></div><div class="scroll-cue">SCROLL TO EXPLORE <span>↓</span></div></div>
+    </section>
+
+    <div class="ticker" aria-hidden="true"><div class="ticker-track">BUILD WITH PURPOSE <span>✳</span> ENGINEER WITH INTENT <span>✳</span> THINK IN SYSTEMS <span>✳</span> BUILD WITH PURPOSE <span>✳</span> ENGINEER WITH INTENT <span>✳</span> THINK IN SYSTEMS <span>✳</span></div></div>
+
+    <section class="section wrap about" id="about">
+      <div class="section-kicker"><span>01</span> / WHO I AM <span class="right-kicker">THE HUMAN BEHIND THE CODE</span></div>
+      <div class="about-layout"><div><h2 class="section-heading">ONE MIND.<br><span class="heading-outline">MULTIPLE</span><br><span class="lime-text">DISCIPLINES.</span></h2></div>
+        <div class="about-right"><span class="micro-label">[ PROFESSIONAL OVERVIEW ]</span><p class="lead" id="aboutText">Ingeniería con enfoque multidisciplinario: sistemas, desarrollo, seguridad y hardware.</p><p class="muted" id="aboutManifesto">No solo hacer que funcione. Diseñar cómo debería funcionar.</p><div class="facts"><div><span>BASE</span><strong id="factCity">{{ profile.location|default("") }}</strong></div><div><span>EDUCATION</span><strong id="factEducation">FORMACIÓN</strong></div><div><span>LANGUAGE</span><strong>ES / EN</strong></div></div></div>
+      </div>
+      <div class="discipline-grid"><article class="discipline"><span class="disc-num">[01]</span><div class="disc-icon icon-terminal">&gt;_</div><h3>DESARROLLO<br>DE SOFTWARE</h3><p>De la lógica de aplicación a herramientas que resuelven necesidades reales.</p><span class="disc-arrow">↗</span></article><article class="discipline"><span class="disc-num">[02]</span><div class="disc-icon icon-circuit">⌘</div><h3>SISTEMAS<br>EMBEBIDOS</h3><p>Integración de sensores, microcontroladores y procesamiento local.</p><span class="disc-arrow">↗</span></article><article class="discipline"><span class="disc-num">[03]</span><div class="disc-icon icon-shield">◇</div><h3>SEGURIDAD<br>& CLOUD</h3><p>Infraestructura, identidad digital y protección de entornos tecnológicos.</p><span class="disc-arrow">↗</span></article><article class="discipline"><span class="disc-num">[04]</span><div class="disc-icon icon-design">▱</div><h3>DISEÑO<br>DE PRODUCTO</h3><p>Interfaces, experiencia de usuario y documentación funcional.</p><span class="disc-arrow">↗</span></article></div>
+    </section>
+
+    <section class="section section-dark" id="projects"><div class="wrap">
+      <div class="section-kicker"><span>02</span> / SELECTED WORK <span class="right-kicker">ENGINEERING IN PRACTICE</span></div>
+      <div class="section-title-row"><h2 class="section-heading">PROOF OF<br><span class="lime-text">CURIOSITY.</span></h2><div class="title-side">[ 03 SELECTED PROJECTS ]<br><span>Explorar → Conocer → Conectar</span></div></div>
+      <div class="projects-grid" id="projectsGrid"></div>
+      <p class="project-note">* Proyectos académicos y prototipos. Los desarrollos en curso se identifican explícitamente.</p>
+    </div></section>
+
+    <section class="section wrap experience" id="experience">
+      <div class="section-kicker"><span>03</span> / JOURNEY <span class="right-kicker">LEARN / APPLY / EVOLVE</span></div>
+      <div class="experience-layout"><div><h2 class="section-heading">ALWAYS<br><span class="heading-outline">IN</span> MOTION<span class="lime-text">.</span></h2><p class="experience-intro">La tecnología cambia. Mi forma de aprender, construir y mejorar también.</p><div class="edu-panel"><span class="micro-label">EDUCATION / CERTIFICATION</span><div id="educationList"></div></div></div><div class="timeline" id="experienceList"></div></div>
+    </section>
+
+    <section class="section stack-section" id="stack"><div class="wrap">
+      <div class="section-kicker"><span>04</span> / TOOLBOX <span class="right-kicker">A TECH STACK WITH RANGE</span></div>
+      <div class="section-title-row"><h2 class="section-heading">THE RIGHT<br><span class="lime-text">TOOLS.</span></h2><div class="title-side">BEYOND THE BUZZWORDS<br><span>Know the tools. Understand the systems.</span></div></div>
+      <div class="skills-list" id="skillsList"></div>
+      <div class="language-strip"><span>COMMUNICATION IS A SKILL, TOO</span><strong id="languages">ESPAÑOL / ENGLISH</strong><span>↗</span></div>
+    </div></section>
+
+    <section class="section agent-section" id="agent"><div class="wrap">
+      <div class="section-kicker"><span>05</span> / INTELLIGENT NETWORKING <span class="right-kicker">HUMAN IDENTITY × AI AGENT</span></div>
+      <div class="section-title-row"><h2 class="section-heading">CONOCE MI<br><span class="lime-text">AGENTE DE IA.</span></h2><div class="title-side">DEMOSTRACIÓN LOCAL<br><span>Dos perfiles invitados en un mismo servidor.</span></div></div>
+      <div class="agent-dashboard">
+        <div class="agent-sidebar"><div class="side-head"><span class="micro-label">AGENT / CONTROL PANEL</span><span class="side-technical">v1.0.0</span></div>
+          <div class="agent-identity"><div class="agent-core"><div class="agent-core-inner">{{ profile.initials|default("ID") }}<span>✳</span></div></div><div><h3 id="agentName">{{ profile.short_name|default(profile.name) }}.AGENT</h3><p>Professional AI representative</p><span class="pill-status" id="agentStatus"><i></i> CHECKING ENGINE</span></div></div>
+          <div class="rule-box"><div class="rule-head"><span>OPERATING PARAMETERS</span><span>↗</span></div><div class="rule-row"><span>AGENT ID</span><strong id="agentId">{{ profile.id }}</strong></div><div class="rule-row"><span>PRIMARY DOMAIN</span><strong id="agentDomain">ENGINEERING</strong></div><div class="rule-row"><span>MODE</span><strong>HUMAN APPROVAL</strong></div><div class="rule-row"><span>AI ENGINE</span><strong id="agentModel">GEMINI</strong></div></div>
+          <p class="agent-explanation">Demostración local: este servidor representa ambos perfiles con Gemini. Al autorizarla, se envían sus datos profesionales y condiciones al proveedor. No firma contratos ni toma compromisos vinculantes.</p>
+          <button class="btn btn-green btn-full" id="openQrAgent">Ver ID + código QR <span>↗</span></button>
+          <a class="small-link" id="vcardLink" href="/api/vcard/{{ profile_id }}">Guardar contacto digital (.vcf) ↗</a>
+        </div>
+        <div class="network-main"><div class="network-header"><div><span class="micro-label">DEMOSTRACIÓN LOCAL / SIN FEDERACIÓN</span><h3>NETWORK <span class="lime-text">/ CONNECT</span></h3></div><span class="network-count" id="connectionStatus"><i></i> NOT CONNECTED</span></div>
+          <div class="network-form"><div class="network-tools"><span id="ownerAccessStatus">Acceso exclusivo del propietario.</span><button id="ownerLoginButton" type="button" hidden>Acceso propietario</button><button id="ownerLogoutButton" type="button" hidden>Cerrar sesión</button></div><label for="peerInput">ID O ENLACE DE UN PERFIL INVITADO LOCAL</label><div class="connection-field"><input id="peerInput" placeholder="nombre-apellido · o pega enlace /p/..." autocomplete="off" /><button id="connectBtn" class="btn btn-green" disabled>Conectar ↗</button></div><div class="network-tools"><span>¿El otro estudiante aún no tiene perfil?</span><button id="openCreatePeer" disabled>+ Crear identidad invitada</button></div></div>
+          <div class="connection-visual"><div class="node node-self"><span class="node-circle">{{ profile.initials|default("ID") }}</span><strong id="selfNode">{{ profile.id }}</strong><small>AGENT A</small></div><div class="connection-line"><div class="travel-dot"></div><span class="line-label">DEMO / CONEXIÓN LOCAL</span></div><div class="node node-peer"><span class="node-circle" id="peerNodeInitials">?</span><strong id="peerNode">AWAITING PEER</strong><small>AGENT B</small></div></div>
+          <div class="agent-log" id="agentLog" aria-live="polite"><div class="empty-log"><span>↗</span><strong>READY FOR COLLABORATION.</strong><p>El propietario puede conectar un perfil invitado local. Esta etapa no comunica servidores independientes.</p></div></div>
+          <div class="network-footer"><div><span class="notice-dot"></span><span id="networkHint">Se requieren dos perfiles conectados y una clave Gemini para negociar.</span></div><button id="negotiateBtn" class="btn btn-green btn-network" disabled>AUTORIZAR DEMOSTRACIÓN <span>→</span></button></div>
+        </div>
+      </div>
+      <div class="agent-footnote"><span>* DEMOSTRACIÓN LOCAL CON GEMINI REAL, CUANDO ESTÁ CONFIGURADO</span><span>Todos los acuerdos son propuestas sujetas a aprobación de ambas personas.</span></div>
+    </div></section>
+
+    <section class="contact-section wrap" id="contact"><div class="section-kicker"><span>06</span> / GET IN TOUCH <span class="right-kicker">EVERYTHING STARTS WITH A CONNECTION</span></div><div class="contact-layout"><div><span class="micro-label">HAVE A PROJECT IN MIND?</span><h2>LET'S MAKE<br><span class="heading-outline">IT</span> <span class="lime-text">REAL.</span></h2></div><div class="contact-right"><p>¿Una idea, un reto técnico o una oportunidad de colaboración? Me interesa escucharla.</p><a id="emailButton" class="btn btn-green btn-large" href="{{ "mailto:" ~ profile.email if profile.email else "#contact" }}">Hablemos <span>↗</span></a><span id="contactEmail">{{ profile.email|default("") }}</span></div></div><div class="footer-base"><a class="footer-mark" href="#top">I·I</a><span>PORTFOLIO / 2026</span><span>BACK TO TOP ↑</span></div></section>
+  </main>
+
+  <dialog id="ownerDialog" class="modal peer-modal"><button class="modal-close" data-close="ownerDialog" aria-label="Cerrar">✕</button><div class="modal-kicker">ACCESO PRIVADO / PROPIETARIO</div><h2>Tu espacio<br><span class="lime-text">de control.</span></h2><form id="ownerLoginForm"><div class="form-grid"><label class="full" for="ownerPassword">CONTRASEÑA<input id="ownerPassword" name="password" type="password" autocomplete="current-password" required maxlength="256" /></label></div><div class="peer-form-footer"><span id="ownerLoginError" role="alert"></span><button class="btn btn-green" type="submit">Iniciar sesión ↗</button></div></form></dialog>
+  <dialog id="qrDialog" class="modal qr-modal"><button class="modal-close" data-close="qrDialog" aria-label="Cerrar">✕</button><div class="modal-kicker">COMPARTIR / PORTFOLIO</div><h2>CONNECT<br><span class="lime-text">WITH ME.</span></h2><div class="qr-sheet"><img id="qrImage" alt="Código QR que abre este perfil" /><div><span>SCAN TO OPEN PROFILE</span><strong id="qrName">{{ profile.name }}</strong><small id="qrUrl">/p/{{ profile_id }}</small></div></div><div class="modal-actions"><button class="btn btn-green" id="copyProfileUrl">Copiar enlace <span>↗</span></button><a class="btn btn-outline" id="downloadQr" download="portfolio.png">Descargar QR ↓</a></div><p class="modal-caption">En teléfonos, el QR debe apuntar a una URL pública o a una IP local accesible desde la misma red; localhost no funciona fuera de tu equipo.</p></dialog>
+  <dialog id="peerDialog" class="modal peer-modal"><button class="modal-close" data-close="peerDialog" aria-label="Cerrar">✕</button><div class="modal-kicker">NEW IDENTITY / COLLABORATOR</div><h2>CREATE A<br><span class="lime-text">PEER AGENT.</span></h2><p class="peer-disclaimer">La otra persona debe autorizar el uso de sus datos profesionales. Utiliza información real para la demostración.</p>
+    <form id="peerForm"><div class="form-grid"><label>NOMBRE COMPLETO *<input name="name" required minlength="3" placeholder="Nombre Apellido" /></label><label>ESPECIALIDAD *<input name="role" required minlength="3" placeholder="Desarrollo de software, electrónica..." /></label><label>HABILIDADES (SEPARADAS POR COMAS) *<input name="skills" required placeholder="Python, Figma, React, IoT" /></label><label>DEDICACIÓN MÁX. HORAS / SEMANA<input name="hours" type="number" min="1" max="20" value="4" /></label><label class="full">OBJETIVO PROFESIONAL *<textarea name="objective" rows="3" required minlength="15" placeholder="Quiero colaborar en proyectos de... y aportar..." ></textarea></label><label>MODALIDAD DE COLABORACIÓN<input name="mode" placeholder="Remoto o híbrido" /></label><label>EMAIL PROFESIONAL (OPCIONAL)<input name="email" type="email" placeholder="contacto@ejemplo.com" /></label></div><div class="peer-form-footer"><span id="peerFormError" role="alert"></span><button class="btn btn-green" type="submit">Crear y conectar <span>↗</span></button></div></form>
+  </dialog>
+  <dialog id="projectDialog" class="modal project-modal"><button class="modal-close" data-close="projectDialog" aria-label="Cerrar">✕</button><span class="modal-kicker" id="modalProjectCategory"></span><div id="modalProjectArt" class="modal-art"></div><h2 id="modalProjectTitle"></h2><p id="modalProjectDescription"></p><div id="modalProjectTags" class="project-tags"></div><div class="modal-project-footer"><span id="modalProjectStatus"></span><button class="btn btn-green" data-close="projectDialog">Cerrar <span>↗</span></button></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

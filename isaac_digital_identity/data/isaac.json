@@ -1,0 +1,40 @@
+{
+  "id": "isaac",
+  "name": "Isaac Infante Méndez",
+  "short_name": "Isaac Infante",
+  "initials": "II",
+  "role": "Ingeniería en Sistemas y Software Embebido",
+  "subtitle": "TI · Ciberseguridad · Sistemas embebidos · Desarrollo",
+  "location": "Querétaro, México",
+  "email": "isinme72710@hotmail.com",
+  "phone": "",
+  "about": "Desarrollo soluciones que conectan software, hardware e infraestructura. Mi experiencia combina administración de sistemas, seguridad tecnológica, diseño de interfaces y prototipado de sistemas embebidos.",
+  "manifesto": "No solo hacer que funcione. Diseñar cómo debería funcionar.",
+  "objective": "Colaborar en soluciones de software, IoT, sistemas embebidos, ciberseguridad e interfaces que resuelvan problemas reales y puedan validarse con prototipos funcionales.",
+  "interests": ["Sistemas embebidos", "IoT industrial", "Automatización", "Ciberseguridad", "UI/UX", "Infraestructura Linux"],
+  "constraints": {
+    "max_hours_week": 5,
+    "collaboration_mode": "remoto o híbrido en Querétaro",
+    "preferred_scope": "prototipos académicos, validación técnica, desarrollo colaborativo",
+    "prohibited": ["compromisos económicos", "cesión de propiedad intelectual", "acuerdos vinculantes sin aprobación humana"]
+  },
+  "education": [{"school": "Universidad Mondragón México", "degree": "Ingeniería en Sistemas y Software Embebido", "dates": "2023 — 2027", "detail": "Programación, electrónica, redes, arquitectura de computadoras y sistemas embebidos."}],
+  "experience": [
+    {"company": "King Global Cargo", "position": "Tecnologías de la Información", "dates": "MAR 2026 — ACTUALIDAD", "desc": "Administración y validación de sistemas corporativos; seguridad, control de accesos e infraestructura; soporte técnico; desarrollo y documentación de software; prototipado de interfaces."},
+    {"company": "Cerraco · Tienda de Cerrajes", "position": "Soporte TI y Sistemas", "dates": "FEB — MAR 2026", "desc": "Diagnóstico y mantenimiento de equipos; configuración de herramientas y solución de incidencias tecnológicas."}
+  ],
+  "certifications": [{"name": "Google Cloud Cybersecurity Professional Certificate", "issuer": "Google · Coursera", "dates": "2025"}],
+  "projects": [
+    {"id": "smart-vibes", "number": "01", "title": "Monitoreo Industrial", "category": "INDUSTRIAL INTELLIGENCE", "tags": ["Edge AI", "DSP", "Android", "Sensores"], "year": "2026 — EN DESARROLLO", "description": "Monitoreo inteligente de maquinaria rotativa con vibración y temperatura, procesamiento local de señales y diagnóstico de condiciones anómalas.", "detail": "Sistema embebido orientado a la detección temprana de anomalías en motores y maquinaria rotativa. Combina adquisición de vibración y temperatura, extracción de características de señales y una interfaz Android para visualizar resultados. El análisis acústico se contempla como una vía experimental. El proyecto continúa en desarrollo y no debe presentarse como un producto comercial terminado.", "outcome": "Prototipo en desarrollo", "visual": "vibes"},
+    {"id": "weather-station", "number": "02", "title": "Monitoreo Climático", "category": "CONNECTED ENVIRONMENTS", "tags": ["ESP32", "Supabase", "IoT", "Web"], "year": "2024 — 2025", "description": "Estación de monitoreo climático con sensores ambientales, conectividad Wi-Fi y visualización de datos en una plataforma web.", "detail": "Proyecto de observación ambiental con captura de variables como temperatura, humedad, presión y condiciones del entorno mediante sensores conectados a ESP32. La información se integra a una base de datos y se consulta desde una interfaz web.", "outcome": "Proyecto académico", "visual": "weather"},
+    {"id": "biometric", "number": "03", "title": "Máquina Expendedora Biométrica", "category": "EMBEDDED ACCESS SYSTEMS", "tags": ["C++", "ESP32", "Arduino", "Biometría"], "year": "2025", "description": "Prototipo de máquina expendedora con autenticación por huella dactilar para validar la identidad de sus usuarios.", "detail": "Integración de lógica embebida y autenticación biométrica aplicada a un prototipo de máquina expendedora. El objetivo fue validar identidad con un sensor de huella y coordinar el flujo del sistema desde microcontroladores.", "outcome": "Prototipo académico", "visual": "bio"}
+  ],
+  "skills": [
+    {"name": "SOFTWARE", "items": ["Python", "C / C++", "JavaScript", "HTML / CSS", "SQL", "Git / GitLab", "CI/CD"]},
+    {"name": "SISTEMAS", "items": ["Linux", "Windows", "Bash", "Virtualización", "Microsoft 365", "Soporte técnico"]},
+    {"name": "SEGURIDAD", "items": ["Cloudflare Access", "IAM", "Google Cloud", "Seguridad en la nube", "Gestión de accesos"]},
+    {"name": "EMBEBIDOS", "items": ["ESP32", "STM32", "Raspberry Pi", "IoT", "Integración de sensores", "Figma"]}
+  ],
+  "languages": "Español nativo · Inglés avanzado (TOEFL ITP 598)",
+  "photo": "/static/assets/profile.jpg"
+}
